@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import classes from './header.module.css';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../hooks/useCarts';
 
 export default function Header() {
 
@@ -8,9 +10,7 @@ export default function Header() {
         name: 'Maereg',
     };
 
-    const cart = {
-        totalCount: 10,
-    };
+    const { cart } = useCart();
 
     const logout = () => {}
 
